@@ -9,7 +9,7 @@ Our project aims to implement an artificial vision system for a minesweeper robo
 1. [Introduction](#Introduction)  
 2. [Problem](#Problem)  
 3. [Solution](#Solution)
-    1. [Block_diagram](#Block_diagram)
+        1. [Block_diagram](#Block_diagram)
 
 
 # Introduction

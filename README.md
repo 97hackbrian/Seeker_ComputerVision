@@ -9,7 +9,7 @@ Our project aims to implement an artificial vision system for a minesweeper robo
 1. [Introduction](#Introduction)  
 2. [Problem](#Problem)  
 3. [Solution](#Solution)
-    1. [Block diagram](#Block diagram)
+    1. [Block_diagram](#Block_diagram)
 
 
 # Introduction
@@ -30,7 +30,7 @@ In response to the critical need for an autonomous vehicle capable of effectivel
 It's important to emphasize a deliberate limitation in our solution: we focus exclusively on the essential tasks of mine detection and collection, deliberately refraining from the intricate process of mapping the entire terrain. This selective focus streamlines the system, enabling it to swiftly and accurately identify metallic mines at the surface level while providing the means to collect them safely. 
 
 By recognizing and adhering to this limitation, we aim to deliver a highly specialized solution that optimizes the efficiency and effectiveness of mine clearance operations. Our approach ensures that the critical steps of mine detection and collection are addressed with the utmost precision and speed, contributing to the overall safety of landmine-affected regions, without the added complexity of terrain mapping.
-## Block diagram
+## Block_diagram
 This is the tentative diagram:
 ![App Screenshot](docs/img/diagramV1.png)
 

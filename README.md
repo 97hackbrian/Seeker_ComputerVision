@@ -2,16 +2,14 @@
 Our project aims to implement an artificial vision system for a minesweeper robot, which will compete in the Minesweeper 2024 competition in Egypt. The artificial vision system leverages a combination of machine learning and deep learning techniques, encompassing data acquisition, image processing, and compression methods. Additionally, a Convolutional Neural Network (CNN) is employed for mine detection and classification. To approach the mines effectively, we employ techniques based on YOLOv5.
 
 ## Badges  
-
-Add badges from somewhere like: [shields.io](https://shields.io/)  
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)  
 
 
 # Table of contents  
 1. [Introduction](#Introduction)  
-2. [Some paragraph](#Problem)  
-
-3. [Another paragraph](#Solution)  
+2. [Problem](#Problem)  
+3. [Solution](#Solution)
+    1. [Block diagram](#Block diagram)
 
 
 # Introduction
@@ -32,6 +30,9 @@ In response to the critical need for an autonomous vehicle capable of effectivel
 It's important to emphasize a deliberate limitation in our solution: we focus exclusively on the essential tasks of mine detection and collection, deliberately refraining from the intricate process of mapping the entire terrain. This selective focus streamlines the system, enabling it to swiftly and accurately identify metallic mines at the surface level while providing the means to collect them safely. 
 
 By recognizing and adhering to this limitation, we aim to deliver a highly specialized solution that optimizes the efficiency and effectiveness of mine clearance operations. Our approach ensures that the critical steps of mine detection and collection are addressed with the utmost precision and speed, contributing to the overall safety of landmine-affected regions, without the added complexity of terrain mapping.
+## Block diagram
+This is the tentative diagram:
+![App Screenshot](docs/img/diagramV1.png)
 
 
 ## Screenshots  

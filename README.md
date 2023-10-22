@@ -9,7 +9,7 @@ Our project aims to implement an artificial vision system for a minesweeper robo
 1. [Introduction](#Introduction)  
 2. [Problem](#Problem)  
 3. [Solution](#Solution)
-        1. [Block_diagram](#Block_diagram)
+   1. [Block_diagram](#Block_diagram)
 
 
 # Introduction
@@ -35,22 +35,6 @@ This is the tentative diagram:
 ![App Screenshot](docs/img/diagramV1.png)
 
 
-## Screenshots  
-
-![App Screenshot](https://lanecdr.org/wp-content/uploads/2019/08/placeholder.png)
-
-## Tech Stack  
-
-**Client:** React, Redux, TailwindCSS  
-
-**Server:** Node, Express
-
-## Features  
-
-- Light/dark mode toggle  
-- Live previews  
-- Fullscreen mode  
-- Cross platform 
 
 ## Lessons Learned  
 
@@ -97,7 +81,7 @@ To run this project, you will need to add the following environment variables to
 
 ## Feedback  
 
-If you have any feedback, please reach out to us at fake@fake.com
+If you have any feedback, please reach out to us at brayan.duran.t@ucb.edu.bo
 
 ## License  
 

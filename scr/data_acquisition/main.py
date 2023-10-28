@@ -19,7 +19,7 @@ def saveDataSet(imagen, key, key2):
         contador_imagenes = last_image_number + 1
     else:
         contador_imagenes = 1
-    title=str("Guardar imagen"+str(contador_imagenes)+"? y/n ")
+    title=str("Guardar imagen"+str(contador_imagenes)+"? Y/N ")
     while True:
         cv2.imshow(title, imagen)
         key_pressed = cv2.waitKey(0) & 0xFF

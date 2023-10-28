@@ -3,10 +3,10 @@ import glob
 from colorama import Fore, Style
 
 print(Fore.MAGENTA + "Toma de dataset" + Style.RESET_ALL)
-print(Fore.GREEN + "Carpeta: ==> data/Datav1" + Style.DIM)
+print(Fore.GREEN + "Carpeta: ==> data/Datav4" + Style.DIM)
 
 def saveDataSet(imagen, key, key2):
-    carpeta = "data/Datav1"
+    carpeta = "data/Datav4"
     patron = carpeta + "/*.jpg"
     GetNames = glob.glob(patron)
     GetNames = sorted(GetNames)  # Ordenar la lista alfabéticamente
@@ -43,7 +43,7 @@ def saveDataSet(imagen, key, key2):
             print("Tecla no válida")
 
 if __name__ == "__main__":
-    camara = cv2.VideoCapture(2)
+    camara = cv2.VideoCapture(0)
     while camara.isOpened():
         ret, imagen = camara.read()
         if ret == True:

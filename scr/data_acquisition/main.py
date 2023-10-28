@@ -19,9 +19,9 @@ def saveDataSet(imagen, key, key2):
         contador_imagenes = last_image_number + 1
     else:
         contador_imagenes = 1
-
+    title=str("Guardar imagen"+str(contador_imagenes)+"? y/n ")
     while True:
-        cv2.imshow("Guardar imagen? y/n ", imagen)
+        cv2.imshow(title, imagen)
         key_pressed = cv2.waitKey(0) & 0xFF
 
         if key_pressed == ord(key):

@@ -3,10 +3,10 @@ import glob
 from colorama import Fore, Style
 
 print(Fore.MAGENTA + "Toma de dataset" + Style.RESET_ALL)
-print(Fore.GREEN + "Carpeta: ==> data/Datav2" + Style.DIM)
+print(Fore.GREEN + "Carpeta: ==> data/Datav1" + Style.DIM)
 
 def saveDataSet(imagen, key, key2):
-    carpeta = "data/Datav2"
+    carpeta = "data/Datav1"
     patron = carpeta + "/*.jpg"
     GetNames = glob.glob(patron)
     GetNames = sorted(GetNames)  # Ordenar la lista alfabéticamente

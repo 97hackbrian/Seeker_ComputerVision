@@ -2,11 +2,11 @@ import cv2
 import glob
 from colorama import Fore, Style
 
-print(Fore.MAGENTA + "Toma de dataseet" + Style.RESET_ALL)
-print(Fore.GREEN + "Carpeta: ==> data/Datav1" + Style.DIM)
+print(Fore.MAGENTA + "Toma de dataset" + Style.RESET_ALL)
+print(Fore.GREEN + "Carpeta: ==> data/Datav2" + Style.DIM)
 
 def saveDataSet(imagen, key, key2):
-    carpeta = "data/Datav1"
+    carpeta = "data/Datav2"
     patron = carpeta + "/*.jpg"
     GetNames = glob.glob(patron)
     GetNames = sorted(GetNames)  # Ordenar la lista alfabéticamente
@@ -19,13 +19,17 @@ def saveDataSet(imagen, key, key2):
         contador_imagenes = last_image_number + 1
     else:
         contador_imagenes = 1
-    title=str("Guardar imagen"+str(contador_imagenes)+"? Y/N ")
+
+    # Ajusta el contador a un número de tres dígitos
+    contador_str = str(contador_imagenes).zfill(3)
+
+    title = f"Guardar imagen {contador_str}? Y/N "
     while True:
         cv2.imshow(title, imagen)
         key_pressed = cv2.waitKey(0) & 0xFF
 
         if key_pressed == ord(key):
-            ruta_imagen = f'{carpeta}/{contador_imagenes}.jpg'
+            ruta_imagen = f'{carpeta}/{contador_str}.jpg'
             cv2.imwrite(ruta_imagen, imagen)
             print(f"Imagen guardada en {ruta_imagen}")
             cv2.destroyAllWindows()
@@ -39,17 +43,14 @@ def saveDataSet(imagen, key, key2):
             print("Tecla no válida")
 
 if __name__ == "__main__":
-    camara=cv2.VideoCapture(0)
+    camara = cv2.VideoCapture(2)
     while camara.isOpened():
         ret, imagen = camara.read()
         if ret == True:
-            cv2.imshow("Camara live",imagen)
-            if(cv2.waitKey(1)&0xFF==ord('x')):
-                saveDataSet(imagen,"y","n")
-        else: break
+            cv2.imshow("Camara live", imagen)
+            if (cv2.waitKey(1) & 0xFF == ord('x')):
+                saveDataSet(imagen, "y", "n")
+        else:
+            break
     camara.release()
     cv2.destroyAllWindows()
-
-        
-
-    

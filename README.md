@@ -32,7 +32,7 @@ It's important to emphasize a deliberate limitation in our solution: we focus ex
 By recognizing and adhering to this limitation, we aim to deliver a highly specialized solution that optimizes the efficiency and effectiveness of mine clearance operations. Our approach ensures that the critical steps of mine detection and collection are addressed with the utmost precision and speed, contributing to the overall safety of landmine-affected regions, without the added complexity of terrain mapping.
 ## Block_diagram
 This is the tentative diagram:
-![App Screenshot](docs/img/diagramV1.png)
+![App Screenshot](docs/img/diagramV2.jpeg)
 
 
 

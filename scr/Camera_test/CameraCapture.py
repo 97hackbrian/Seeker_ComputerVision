@@ -13,8 +13,8 @@ def main():
     # Configuración de la cámara con el backend V4L2
     cap = cv2.VideoCapture(0, cv2.CAP_V4L2)  # Puedes cambiar el número de la cámara según tu configuración (0 por la cámara predeterminada)
     # Configuración de parámetros
-    cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1200)    # Ancho de la resolución
-    cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 500)   # Alto de la resolución
+    cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1279)    # Ancho de la resolución 1280
+    cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 719)   # Alto de la resolución   720
     cap.set(cv2.CAP_PROP_FPS, 59)             # FPS (cuadros por segundo)
     # Configurar la cámara para capturar en blanco y negro
     cap.set(cv2.CAP_PROP_CONVERT_RGB, 0)
@@ -26,6 +26,8 @@ def main():
     while True:
         ret, frame = cap.read()
         frame=frame[:, :, 0]
+        frame = cv2.rotate(frame, cv2.ROTATE_180)
+
 
         if not ret:
             print("Error al capturar el fotograma.")

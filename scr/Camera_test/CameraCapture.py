@@ -2,10 +2,10 @@ import cv2
 
 def apply_clahe_gaussian(gray):
     # Aplicar el ecualizador CLAHE
-    clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))
+    clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(5, 5))
     clahe_result = clahe.apply(gray)
     # Aplicar un desenfoque gaussiano
-    blurred = cv2.GaussianBlur(clahe_result, (7, 7), 0)
+    blurred = cv2.GaussianBlur(clahe_result, (5, 5), 0)
 
     return blurred
 

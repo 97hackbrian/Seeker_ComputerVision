@@ -4,7 +4,7 @@ import cv2
 import numpy as np
 
 # 1. Cargar el modelo preentrenado
-model = torch.load('ruta/a/tu/modelo.pth')  # Ajusta la ruta según donde hayas guardado tu modelo
+model = torch.load('/home/hackbrian/Documentos/gitProyects/Seeker_ComputerVision/YoloTrain/runs/segment/train/weights/best.pt')  # Ajusta la ruta según donde hayas guardado tu modelo
 model.eval()
 
 # 2. Configurar la transformación de la imagen

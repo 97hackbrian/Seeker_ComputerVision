@@ -3,7 +3,7 @@ import torchvision.transforms as transforms
 import cv2
 
 # 1. Cargar el modelo en PyTorch
-model = torch.load('YoloTrain/runs/segment/train/weights/best.pt')  # Ajusta la ruta según donde hayas guardado tu modelo
+model = torch.load('/home/hackbrian/Documentos/gitProyects/Seeker_ComputerVision/YoloTrain/runs/segment/train/weights/best.pt')  # Ajusta la ruta según donde hayas guardado tu modelo
 model.eval()
 
 # 2. Preprocesar la entrada

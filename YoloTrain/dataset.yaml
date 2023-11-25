@@ -1,0 +1,5 @@
+train: train/
+val: val/
+test: 
+nc: 1
+names: ["cubo"]

@@ -1,0 +1,1 @@
+yolo task=segment mode=train epochs=50 data=dataset.yaml model=yolov8n-seg.pt imgsz=640 batch=2

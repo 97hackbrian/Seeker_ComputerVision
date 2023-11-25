@@ -1,5 +1,5 @@
-train: train/
-val: val/
+train: /home/hackbrian/gitProyects/Seeker_ComputerVision/YoloTrain/train
+val: /home/hackbrian/gitProyects/Seeker_ComputerVision/YoloTrain/val
 test: 
 nc: 1
 names: ["cubo"]

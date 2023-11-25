@@ -14,7 +14,7 @@ while True:
     ret, frame = cap.read()
 
     # Leemos resultados
-    resultados = model.predict(frame, imgsz = 640, conf = 0.8)
+    resultados = model.predict(frame, imgsz = 640, conf = 0.83)
 
     # Mostramos resultados
     anotaciones = resultados[0].plot()

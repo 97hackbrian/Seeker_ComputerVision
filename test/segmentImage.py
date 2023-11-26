@@ -1,31 +1,9 @@
 import torch
-import torchvision.transforms as transforms
-import cv2
+# Loading in yolov5s - you can switch to larger models such as yolov5m or yolov5l, or smaller such as yolov5n
+model = torch.hub.load('ultralytics/yolov5', 'custom', path='path_to_weights.pt')
 
-# 1. Cargar el modelo en PyTorch
-model = torch.load('/home/hackbrian/Documentos/gitProyects/Seeker_ComputerVision/YoloTrain/runs/segment/train/weights/best.pt')  # Ajusta la ruta según donde hayas guardado tu modelo
-model.eval()
-
-# 2. Preprocesar la entrada
-image = cv2.imread('/home/hackbrian/Descargas/data/dataV1/images/ground/057.jpg')  # Ajusta la ruta según tu imagen
-image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-transform = transforms.Compose([
-    transforms.ToTensor(),
-    # Añade más transformaciones si es necesario (normalización, redimensionamiento, etc.)
-])
-input_image = transform(image).unsqueeze(0)
-
-# 3. Realizar la inferencia
-with torch.no_grad():
-    output = model(input_image)
-
-# 4. Postprocesamiento de resultados
-# (Dependerá del formato de salida específico de tu modelo YOLO)
-
-# 5. Visualización de resultados
-# (Dibuja cuadros delimitadores alrededor de los objetos detectados)
-
-# Muestra la imagen con las detecciones
-cv2.imshow('Detecciones YOLO', image)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+img = 'https://i.ytimg.com/vi/q71MCWAEfL8/maxresdefault.jpg'  # or file, Path, PIL, OpenCV, numpy, list
+results = model(img)
+fig, ax = plt.subplots(figsize=(16, 12))
+ax.imshow(results.render()[0])
+plt.show()

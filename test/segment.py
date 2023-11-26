@@ -3,7 +3,7 @@ from ultralytics import YOLO
 import cv2
 
 # Leer nuestro modelo
-model = YOLO("/home/hackbrian/gitProyects/Seeker_ComputerVision/YoloTrain/runs/segment/train/weights/best.pt")
+model = YOLO("/home/hackbrian/Documentos/train2/runs/segment/train/weights/best.pt")#2
 
 # Realizar VideoCaptura
 cap = cv2.VideoCapture(0)
@@ -14,7 +14,7 @@ while True:
     ret, frame = cap.read()
 
     # Leemos resultados
-    resultados = model.predict(frame, imgsz = 640, conf = 0.83)
+    resultados = model.predict(frame, imgsz = 640, conf = 0.8)
 
     # Mostramos resultados
     anotaciones = resultados[0].plot()

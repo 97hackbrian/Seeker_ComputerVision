@@ -1,17 +1,9 @@
 import torch
-import torchvision.models as models
-from torchvision.models.detection import yolo
+from models.yolo import Model
+from utils.general import export_tfweights
 
-# Carga tu modelo YOLO preentrenado
-model = models.detection.yolo_v3(pretrained=False)
-model.load_state_dict(torch.load('yolo_pretrained_weights.pth'))
-model.eval()
+# Cargar el modelo de YOLO en formato Darknet
+model = Model('path/to/your/yolov5s.yaml')  # Reemplaza con la ruta correcta a tu archivo de configuración YAML
 
-# Ejemplo de entrada (ajusta según las necesidades de tu modelo)
-dummy_input = torch.randn(1, 3, 416, 416)
-
-# Traza el modelo con JIT
-traced_model = torch.jit.trace(model, dummy_input)
-
-# Guarda el modelo trazado
-traced_model.save('yolo_traced_model.pt')
+# Exportar los pesos a un formato compatible con PyTorch
+export_tfweights(model, 'path/to/your/darknet/weights')  # Reemplaza con la ruta correcta a tus pesos de Darknet

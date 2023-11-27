@@ -6,19 +6,16 @@ sys.path.append('../Seeker_ComputerVision')
 
 from scr.libs.YOLOSeg import YOLOSeg
 
-def apply_clahe_gaussian(gray):
-    blurred = cv2.GaussianBlur(gray, (5, 5), 0)
-    return blurred
 
 # Initialize the webcam
 cap = cv2.VideoCapture(0, cv2.CAP_V4L2)
-cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
-cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 640)
+cap.set(cv2.CAP_PROP_FRAME_WIDTH, 200)
+cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 200)
 cap.set(cv2.CAP_PROP_FPS, 59)
 cap.set(cv2.CAP_PROP_CONVERT_RGB, 0)
 # Initialize YOLOv5 Instance Segmentator
 model_path = "../Seeker_ComputerVision/YoloTrain/runs/segment/train/weights/best2.onnx"
-yoloseg = YOLOSeg(model_path, conf_thres=0.79, iou_thres=0.3)
+yoloseg = YOLOSeg(model_path, conf_thres=0.89, iou_thres=0.8)
 
 cv2.namedWindow("Detected Objects", cv2.WINDOW_NORMAL)
 
@@ -29,6 +26,7 @@ while cap.isOpened():
     # Read frame from the video
     ret, frame = cap.read()
     frame=frame[:, :, 0]
+    frame = cv2.resize(frame, (200, 200))
     frame = cv2.rotate(frame, cv2.ROTATE_180)
     
     if not ret:

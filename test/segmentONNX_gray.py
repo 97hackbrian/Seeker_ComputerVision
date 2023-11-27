@@ -15,7 +15,7 @@ cap = cv2.VideoCapture(0, cv2.CAP_V4L2)
 cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
 cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 640)
 cap.set(cv2.CAP_PROP_FPS, 59)
-
+cap.set(cv2.CAP_PROP_CONVERT_RGB, 0)
 # Initialize YOLOv5 Instance Segmentator
 model_path = "../Seeker_ComputerVision/YoloTrain/runs/segment/train/weights/best2.onnx"
 yoloseg = YOLOSeg(model_path, conf_thres=0.79, iou_thres=0.3)
@@ -28,11 +28,12 @@ start_time = time.time()
 while cap.isOpened():
     # Read frame from the video
     ret, frame = cap.read()
-    
+    frame=frame[:, :, 0]
     frame = cv2.rotate(frame, cv2.ROTATE_180)
-
+    
     if not ret:
         break
+    
 
     # Update object localizer
     boxes, scores, class_ids, masks = yoloseg(frame)

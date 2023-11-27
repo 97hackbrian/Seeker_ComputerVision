@@ -42,10 +42,10 @@ def augment_data(input_image_folder, input_label_folder, output_image_folder, ou
             shutil.copy(label_path, output_label_path)
 
 def main():
-    input_image_folder = "/home/hackbrian/gitProyects/Seeker_ComputerVision/YoloTrainV2/train/images"
-    input_label_folder = "/home/hackbrian/gitProyects/Seeker_ComputerVision/YoloTrainV2/train/labels"
-    output_image_folder = "/home/hackbrian/gitProyects/Seeker_ComputerVision/YoloTrainV3/train/images"
-    output_label_folder = "/home/hackbrian/gitProyects/Seeker_ComputerVision/YoloTrainV3/train/labels"
+    input_image_folder = "/home/hackbrian/gitProyects/Seeker_ComputerVision/YoloTrainV2/val/images"
+    input_label_folder = "/home/hackbrian/gitProyects/Seeker_ComputerVision/YoloTrainV2/val/labels"
+    output_image_folder = "/home/hackbrian/gitProyects/Seeker_ComputerVision/YoloTrainV3/val/images"
+    output_label_folder = "/home/hackbrian/gitProyects/Seeker_ComputerVision/YoloTrainV3/val/labels"
 
     augment_data(input_image_folder, input_label_folder, output_image_folder, output_label_folder)
 

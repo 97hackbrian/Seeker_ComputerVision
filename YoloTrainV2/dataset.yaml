@@ -1,0 +1,5 @@
+train: /home/hackbrian/gitProyects/Seeker_ComputerVision/YoloTrainV2/train
+val: /home/hackbrian/gitProyects/Seeker_ComputerVision/YoloTrainV2/val
+test: 
+nc: 1
+names: ["cubo"]

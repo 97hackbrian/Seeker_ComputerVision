@@ -17,7 +17,7 @@ cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 640)
 cap.set(cv2.CAP_PROP_FPS, 59)
 
 # Initialize YOLOv5 Instance Segmentator
-model_path = "../Seeker_ComputerVision/YoloTrain/runs/segment/train/weights/best.onnx"
+model_path = "../Seeker_ComputerVision/YoloTrain/runs/segment/train/weights/best2.onnx"
 yoloseg = YOLOSeg(model_path, conf_thres=0.79, iou_thres=0.3)
 
 cv2.namedWindow("Detected Objects", cv2.WINDOW_NORMAL)

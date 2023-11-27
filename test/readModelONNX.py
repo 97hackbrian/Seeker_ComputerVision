@@ -6,11 +6,11 @@ from scr.libs.YOLOSeg import YOLOSeg
 
 
 # Initialize YOLOv5 Instance Segmentator
-model_path = "../Seeker_ComputerVision/YoloTrain/runs/segment/train/weights/best.onnx"
+model_path = "../Seeker_ComputerVision/YoloTrain/runs/segment/train/weights/best2.onnx"
 yoloseg = YOLOSeg(model_path, conf_thres=0.5, iou_thres=0.3)
 
 # Read image
-img = cv2.imread("/home/hackbrian/Documentos/YoloTrain/train/images/001.jpg_ground.jpg")
+img = cv2.imread("/home/hackbrian/Documentos/YoloTrain/train/images/012.jpg_ground.jpg")
 
 # Detect Objects
 boxes, scores, class_ids, masks = yoloseg(img)

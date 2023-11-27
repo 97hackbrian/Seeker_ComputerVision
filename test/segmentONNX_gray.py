@@ -35,6 +35,12 @@ while cap.isOpened():
         break
     
 
+    frame = cv2.cvtColor(frame, cv2.COLOR_GRAY2RGB)
+
+    #frame = cv2.resize(frame, (640, 640))
+    #input_tensor = torch.from_numpy(gray_frame).permute(2, 0, 1).float() / 255.0
+    #input_tensor = input_tensor.unsqueeze(0)
+    #
     # Update object localizer
     boxes, scores, class_ids, masks = yoloseg(frame)
 

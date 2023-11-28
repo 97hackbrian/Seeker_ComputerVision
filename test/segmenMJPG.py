@@ -17,7 +17,7 @@ def apply_clahe_gaussian(image):
     clahe_result = cv2.merge([b_clahe, g_clahe, r_clahe])
 
     # Aplicar un desenfoque gaussiano
-    blurred = cv2.GaussianBlur(clahe_result, (5, 5), 0)
+    blurred = cv2.GaussianBlur(clahe_result, (13, 13), 0)##5,5
 
     return blurred
 
@@ -45,7 +45,7 @@ while True:
     #frame = cv2.cvtColor(frame, cv2.COLOR_GRAY2RGB)
     frame=apply_clahe_gaussian(frame)
     # Leemos resultados
-    resultados = model.predict(frame, imgsz=640, conf=0.93)
+    resultados = model.predict(frame, imgsz=640, conf=0.91)
 
     # Mostramos resultados
     anotaciones = resultados[0].plot()

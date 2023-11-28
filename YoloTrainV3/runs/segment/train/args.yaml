@@ -3,8 +3,8 @@ mode: train
 model: yolov8n-seg.pt
 data: dataset.yaml
 epochs: 1000
-patience: 50
-batch: 15
+patience: 380
+batch: 20
 imgsz: 640
 save: true
 save_period: -1

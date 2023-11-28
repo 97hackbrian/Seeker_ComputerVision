@@ -42,7 +42,7 @@ while True:
     input_tensor = input_tensor.unsqueeze(0)
 
     # Leemos resultados
-    resultados = model.predict(input_tensor, imgsz=640, conf=0.88)
+    resultados = model.predict(input_tensor, imgsz=640, conf=0.92)
 
     # Mostramos resultados
     anotaciones = resultados[0].plot()

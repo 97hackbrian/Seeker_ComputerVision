@@ -45,26 +45,30 @@ What did you learn while building this project? What challenges did you face and
 Clone the project  
 
 ~~~bash  
-  git clone https://link-to-project
+  git clone https://github.com/97hackbrian/Seeker_ComputerVision.git
 ~~~
 
-Go to the project directory  
 
+Go to the branch you are interested in
+main
+Train
+TrainGray
+embedded
+TestTakeData
 ~~~bash  
+  git switch nombre_de_la_rama
+
   cd my-project
 ~~~
 
 Install dependencies  
 
 ~~~bash  
-npm install
+conda env create -f environment.yml
+pip install -r requirements.txt
+
 ~~~
 
-Start the server  
-
-~~~bash  
-npm run start
-~~~
 
 ## Environment Variables  
 

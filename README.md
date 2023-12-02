@@ -1,5 +1,5 @@
 # Seeker_ComputerVision
-Our project aims to implement an artificial vision system for a minesweeper robot, which will compete in the Minesweeper 2024 competition in Egypt. The artificial vision system leverages a combination of machine learning and deep learning techniques, encompassing data acquisition, image processing, and compression methods. Additionally, a Convolutional Neural Network (CNN) is employed for mine detection and classification. To approach the mines effectively, we employ techniques based on YOLOv5.
+Our project aims to implement an artificial vision system for a minesweeper robot, which will compete in the Minesweeper 2024 competition in Egypt. The artificial vision system leverages a combination of machine learning and deep learning techniques, encompassing data acquisition, image processing, and compression methods. Additionally, a Convolutional Neural Network (CNN) is employed for mine detection and classification. To approach the mines effectively, we employ techniques based on YOLOv8.
 
 ## Badges  
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)  
